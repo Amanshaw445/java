@@ -1,3 +1,4 @@
+package java.Array;
 import java.util.Scanner;
 public class array2 {
     

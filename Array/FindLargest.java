@@ -1,9 +1,10 @@
+package Array;
 import java.util.Scanner;
 
-public class reverseArray {
-    int[] arr; 
+public class FindLargest {
+    int arr[];
     Scanner scanner = new Scanner(System.in);
-
+    
 void arrayInput(){
     System.out.print("Enter the size of array: ");
     int size= scanner.nextInt();
@@ -23,25 +24,22 @@ void printArray(){
     }
 }
 
-void reverse(){
-    int left = 0;
-    int right = arr.length-1;
-    while(left<right){
-        int temp = arr[left];
-        arr[left] = arr[right];
-        arr[right] = temp;
-        left++;
-        right--;
+
+int Largest(){
+    int max = arr[0];
+    for(int i=0; i<arr.length; i++){
+        if(max < arr[i]){
+            max = arr[i];
+        } 
     }
+    return max;
 }
 
-public static void main (String []args) {
-    reverseArray obj = new reverseArray();
+public static void main(String[] args) {
+    FindLargest obj = new FindLargest();
     obj.arrayInput();
-    System.out.println("original array : ");
-    obj.printArray();
-    obj.reverse();
-    System.out.println("Reversed array : ");
-    obj.printArray();
-    }
+    
+    int result = obj.Largest();
+    System.out.print("the greatest is : " + result);
+}
 }
