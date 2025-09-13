@@ -1,5 +1,3 @@
-package SORTING;
-
 public class insersionSort {
     static void iSort( int [] a){
 

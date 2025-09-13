@@ -1,4 +1,3 @@
-package Array;
 public class frogJump {
 
     static int best(int[] h, int n, int idx){
